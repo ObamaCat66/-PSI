@@ -172,6 +172,3 @@ namespace TourneeFutee
         }
     }
 }
-}
-}
-}
