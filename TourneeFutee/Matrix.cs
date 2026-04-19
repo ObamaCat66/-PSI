@@ -6,6 +6,7 @@ namespace TourneeFutee
 {
     public class Matrix
     {
+
         // On utilise une liste de listes pour gérer facilement l'ajout/suppression de lignes
         private List<List<float>> _data;
 

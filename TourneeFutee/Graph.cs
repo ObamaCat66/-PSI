@@ -63,6 +63,7 @@ namespace TourneeFutee
 
         // Ajoute le sommet de nom `name` et de valeur `value` (0 par défaut) dans le graphe
         // Lève une ArgumentException s'il existe déjà un sommet avec le même nom dans le graphe
+
         public void AddVertex(string name, float value = 0)
         {
             if (_vertexIndices.ContainsKey(name))

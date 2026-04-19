@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
+
 namespace TourneeFutee
 {
     // Modélise une tournée dans le cadre du problème du voyageur de commerce
