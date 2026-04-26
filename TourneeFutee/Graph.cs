@@ -35,11 +35,10 @@ namespace TourneeFutee
 
         // --- Constructeur flexible ---
 
-        // En utilisant "isOriented" comme nom de paramètre mais avec "directed" comme alias de secours,
-        // ou simplement en acceptant le nom que les tests envoient.
-        public Graph(bool directed = true, float noEdgeValue = 0)
+        
+        public Graph(bool isOriented = true, float noEdgeValue = 0)
         {
-            _directed = directed;
+            _directed = isOriented; // On remplit ton champ privé habituel
             _noEdgeValue = noEdgeValue;
 
             _matrix = new Matrix(0, 0, noEdgeValue);
@@ -48,9 +47,9 @@ namespace TourneeFutee
             _vertexValues = new List<float>();
         }
 
-        
+
         // le constructeur ci-dessus fonctionne car C# fait la correspondance par position.
-        
+
         // --- Gestion des sommets ---
 
         public bool ContainsVertex(string name)

@@ -386,7 +386,7 @@
 
         {
 
-            Graph g = new Graph(directed: directed);
+            Graph g = new Graph(isOriented: directed);
 
             Assert.AreEqual(0, g.Order, $"L'ordre d'un graphe vide est 0");
 
@@ -408,7 +408,7 @@
 
         {
 
-            Graph g = new Graph(directed: directed);
+            Graph g = new Graph(isOriented: directed);
 
 
 
@@ -442,7 +442,7 @@
 
         {
 
-            Graph g = new Graph(directed: directed);
+            Graph g = new Graph(isOriented: directed);
 
 
 
@@ -516,7 +516,7 @@
 
         {
 
-            Graph g = new Graph(directed: directed);
+            Graph g = new Graph(isOriented: directed);
 
 
 
@@ -556,7 +556,7 @@
 
         {
 
-            Graph g = new Graph(directed: directed);
+            Graph g = new Graph(isOriented: directed);
 
 
 
@@ -584,7 +584,7 @@
 
 
 
-            Graph g = new Graph(directed: directed);
+            Graph g = new Graph(isOriented: directed);
 
 
 
@@ -724,7 +724,7 @@
 
         {
 
-            Graph g = new Graph(directed: directed);
+            Graph g = new Graph(isOriented: directed);
 
 
 
@@ -754,7 +754,7 @@
 
         {
 
-            Graph g = new Graph(directed: directed);
+            Graph g = new Graph(isOriented: directed);
 
 
 
@@ -784,7 +784,7 @@
 
         {
 
-            Graph g = new Graph(directed: directed);
+            Graph g = new Graph(isOriented: directed);
 
 
 
@@ -822,7 +822,7 @@
 
         {
 
-            Graph g = new Graph(directed: directed);
+            Graph g = new Graph(isOriented: directed);
 
 
 
@@ -878,7 +878,7 @@
 
         {
 
-            Graph g = new Graph(directed: directed);
+            Graph g = new Graph(isOriented: directed);
 
 
 
@@ -960,7 +960,7 @@
 
         {
 
-            Graph g = new Graph(directed: directed);
+            Graph g = new Graph(isOriented: directed);
 
 
 
@@ -1000,7 +1000,7 @@
 
         {
 
-            Graph g = new Graph(directed: directed);
+            Graph g = new Graph(isOriented: directed);
 
 
 
@@ -1034,7 +1034,7 @@
 
         {
 
-            Graph g = new Graph(directed: directed);
+            Graph g = new Graph(isOriented: directed);
 
 
 
@@ -1146,7 +1146,7 @@
 
         {
 
-            Graph g = new Graph(directed: directed);
+            Graph g = new Graph(isOriented: directed);
 
 
 
@@ -1262,7 +1262,7 @@
 
         {
 
-            Graph g = new Graph(directed: directed);
+            Graph g = new Graph(isOriented: directed);
 
 
 
@@ -1294,7 +1294,7 @@
 
         {
 
-            Graph g = new Graph(directed: directed);
+            Graph g = new Graph(isOriented: directed);
 
 
 
@@ -1376,7 +1376,7 @@
 
         {
 
-            Graph g = new Graph(directed: directed);
+            Graph g = new Graph(isOriented: directed);
 
 
 
@@ -1408,7 +1408,7 @@
 
         {
 
-            Graph g = new Graph(directed: directed);
+            Graph g = new Graph(isOriented: directed);
 
             g.AddVertex("A");
 
