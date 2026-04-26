@@ -109,7 +109,8 @@ namespace TourneeFutee
 
         // --- Gestion des arcs ---
 
-        public void AddEdge(string sourceName, string destinationName, float weight = 1)
+        // On ajoute 'bool strict = true' à la fin des paramètres
+        public void AddEdge(string sourceName, string destinationName, float weight = 1, bool strict = true)
         {
             if (!ContainsVertex(sourceName) || !ContainsVertex(destinationName))
             {
@@ -119,14 +120,29 @@ namespace TourneeFutee
             int i = _vertexIndices[sourceName];
             int j = _vertexIndices[destinationName];
 
-            // Pour satisfaire AddDuplicateEdge dans GraphTests
+            // Si l'arc existe déjà dans la matrice
             if (_matrix.GetValue(i, j) != _noEdgeValue)
             {
-                throw new ArgumentException("L'arc existe déjà.");
+                // MODE STRICT (Par défaut, utilisé par GraphTests)
+                if (strict)
+                {
+                    throw new ArgumentException("L'arc existe déjà.");
+                }
+
+                // MODE SOUPLE (Utilisé par la Persistance)
+                if (_matrix.GetValue(i, j) != weight)
+                {
+                    throw new ArgumentException("L'arc existe déjà avec un poids différent.");
+                }
+                return; // On sort sans erreur si le poids est le même
             }
 
             _matrix.SetValue(i, j, weight);
-            if (!_directed) _matrix.SetValue(j, i, weight);
+
+            if (!_directed)
+            {
+                _matrix.SetValue(j, i, weight);
+            }
         }
 
         public void RemoveEdge(string sourceName, string destinationName)

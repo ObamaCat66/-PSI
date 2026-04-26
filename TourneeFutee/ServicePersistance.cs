@@ -10,7 +10,8 @@ namespace TourneeFutee
 
         public ServicePersistance(string serverIp, string dbname, string user, string pwd)
         {
-            _connectionString = $"server={serverIp};database={dbname};uid={user};pwd={pwd};";
+            // Vérifie bien le nom de la base (Database) et l'utilisateur (Uid)
+            _connectionString = "Server=localhost;Database=tourneefutee;Uid=root;Pwd=SqL110906!;";
             using (var conn = OpenConnection()) { /* Test connexion */ }
         }
 
@@ -106,7 +107,8 @@ namespace TourneeFutee
                     using (var r = cmd.ExecuteReader())
                     {
                         while (r.Read())
-                            g.AddEdge(idToName[r.GetUInt32("sommet_source_id")], idToName[r.GetUInt32("sommet_dest_id")], r.GetFloat("poids"));
+                            // Le "false" à la fin correspond au paramètre 'strict' de notre nouvelle méthode AddEdge
+                            g.AddEdge(idToName[r.GetUInt32("sommet_source_id")], idToName[r.GetUInt32("sommet_dest_id")], r.GetFloat("poids"), false);
                     }
                 }
                 return g;
