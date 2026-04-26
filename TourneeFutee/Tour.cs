@@ -79,6 +79,31 @@ namespace TourneeFutee
         }
 
         // TODO : ajouter toutes les méthodes que vous jugerez pertinentes 
+        // Propriété utilisée par les tests
+        public float TotalCost => _cost;
 
+        // Propriété qui transforme les segments (A->C, C->F) en liste de sommets (A, C, F)
+        public List<string> Vertices
+        {
+            get
+            {
+                var list = new List<string>();
+                if (_segments.Count == 0) return list;
+                foreach (var seg in _segments) list.Add(seg.source);
+                list.Add(_segments[_segments.Count - 1].destination); // Le dernier retour au point de départ
+                return list;
+            }
+        }
+
+        // Constructeur attendu par les tests unitaires (Test 6)
+        public Tour(List<string> vertexSequence, float cost)
+        {
+            _cost = cost;
+            _segments = new List<(string source, string destination)>();
+            for (int i = 0; i < vertexSequence.Count - 1; i++)
+            {
+                _segments.Add((vertexSequence[i], vertexSequence[i + 1]));
+            }
+        }
     }
 }

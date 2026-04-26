@@ -5,6 +5,7 @@ namespace TourneeFutee
 {
     public class Graph
     {
+        public IReadOnlyList<string> Vertices => _vertexNames;
         // Instance de la matrice d'adjacence
         private Matrix _matrix;
 
