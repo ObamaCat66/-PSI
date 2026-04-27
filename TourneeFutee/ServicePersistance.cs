@@ -90,7 +90,7 @@ Après cela, tous les tests compileront sans problème.
                     directed = Convert.ToBoolean(cmd.ExecuteScalar());
                 }
 
-                // Initialisation avec la classe Graph (on met 0 ou +Infini en noEdgeValue selon ton usage)
+                // Initialisation avec la classe Graph (on met 0 ou +Infini en noEdgeValue selon l'usage)
                 Graph g = new Graph(directed, float.PositiveInfinity);
                 var idToName = new Dictionary<uint, string>();
 
