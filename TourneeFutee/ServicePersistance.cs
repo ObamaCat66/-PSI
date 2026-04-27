@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 
-namespace TourneeFutee
+namespace TourneeFutee // veuillez rentrez vos mot de passe sql pour que la connection fonctionne
 {
     public class ServicePersistance
     {
@@ -10,8 +10,8 @@ namespace TourneeFutee
 
         public ServicePersistance(string serverIp, string dbname, string user, string pwd)
         {
-            // Vérifie bien le nom de la base (Database) et l'utilisateur (Uid)
-            _connectionString = "Server=localhost;Database=tourneefutee;Uid=root;Pwd=SqL110906!;";
+            // Vérifie bien le nom de la base (Database) et l'utilisateur (Uid), mettre soin propre mot de passe
+            _connectionString = "Server=localhost;Database=tourneefutee;Uid=root;Pwd=Philipot2602;";//<=== Mot de passe a remplacer ici
             using (var conn = OpenConnection()) { /* Test connexion */ }
         }
 
