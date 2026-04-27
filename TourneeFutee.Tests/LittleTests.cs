@@ -315,7 +315,7 @@
         // et le poids des arcs par la matrice d'adjacence `adjacencyMatrix`
         private Graph CreateGraph(bool directed, List<string> verticesNames, Matrix adjacencyMatrix)
         {
-            Graph g = new Graph(isOriented: directed);
+            Graph g = new Graph(directed: directed);
             int order = verticesNames.Count;
 
             // ajout des sommets
@@ -373,7 +373,7 @@
         */
         private Graph ASymetricCostsGraph()
         {
-            Graph graph = new Graph(isOriented: true);
+            Graph graph = new Graph(directed: true);
 
             // Villes
             graph.AddVertex("A");

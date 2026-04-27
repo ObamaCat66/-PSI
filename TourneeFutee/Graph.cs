@@ -36,9 +36,9 @@ namespace TourneeFutee
         // --- Constructeur flexible ---
 
         
-        public Graph(bool isOriented = true, float noEdgeValue = 0)
+        public Graph(bool directed = true, float noEdgeValue = 0)
         {
-            _directed = isOriented; // On remplit ton champ privé habituel
+            _directed = directed; // On remplit le champ privé habituel
             _noEdgeValue = noEdgeValue;
 
             _matrix = new Matrix(0, 0, noEdgeValue);

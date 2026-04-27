@@ -10,8 +10,8 @@ namespace TourneeFutee // veuillez rentrez vos mot de passe sql pour que la conn
 
         public ServicePersistance(string serverIp, string dbname, string user, string pwd)
         {
-            // Vérifie bien le nom de la base (Database) et l'utilisateur (Uid), mettre soin propre mot de passe
-            _connectionString = "Server=localhost;Database=tourneefutee;Uid=root;Pwd=Philipot2602;";//<=== Mot de passe a remplacer ici
+            // Vérification du nom de la base (Database) et de l'utilisateur (Uid), mettre soin propre mot de passe
+            _connectionString = "Server=localhost;Database=tourneefutee;Uid=root;Pwd=SqL110906!;";//<=== Mot de passe a remplacer ici
             using (var conn = OpenConnection()) { /* Test connexion */ }
         }
 
@@ -83,7 +83,7 @@ namespace TourneeFutee // veuillez rentrez vos mot de passe sql pour que la conn
                     directed = Convert.ToBoolean(cmd.ExecuteScalar());
                 }
 
-                // Initialisation avec ta classe Graph (on met 0 ou +Infini en noEdgeValue selon ton usage)
+                // Initialisation avec la classe Graph (on met 0 ou +Infini en noEdgeValue selon ton usage)
                 Graph g = new Graph(directed, float.PositiveInfinity);
                 var idToName = new Dictionary<uint, string>();
 
