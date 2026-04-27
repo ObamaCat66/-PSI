@@ -2,7 +2,14 @@ using System;
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 
-namespace TourneeFutee // veuillez rentrez vos mot de passe sql pour que la connection fonctionne
+namespace TourneeFutee 
+/* Veuillez lire le README : les instructions (probablement évidentes pour vous) pour faire fonctionner les 7 derniers tests y sont indiquées. Je les remets ici au cas où.
+
+Bonjour,
+Pour pouvoir exécuter les 7 tests de persistance, il vous faudra modifier la ligne 14 de ServicePersistance et mettre votre propre mot de passe à la place de celui déjà écrit après Pwd.
+Ensuite, il faut ouvrir notre fichier SQL, présent dans le dossier de la solution, avec MySQL, puis le lancer une fois en cliquant sur l’éclair.
+Après cela, tous les tests compileront sans problème.
+*/
 {
     public class ServicePersistance
     {
@@ -11,7 +18,7 @@ namespace TourneeFutee // veuillez rentrez vos mot de passe sql pour que la conn
         public ServicePersistance(string serverIp, string dbname, string user, string pwd)
         {
             // Vérification du nom de la base (Database) et de l'utilisateur (Uid), mettre soin propre mot de passe
-            _connectionString = "Server=localhost;Database=tourneefutee;Uid=root;Pwd=SqL110906!;";//<=== Mot de passe a remplacer ici
+            _connectionString = "Server=localhost;Database=tourneefutee;Uid=root;Pwd=Philipot2602;";//<=== Mot de passe a remplacer ici
             using (var conn = OpenConnection()) { /* Test connexion */ }
         }
 
